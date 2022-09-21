@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body{
+          /* background-image: linear-gradient(rgb(0, 102, 255), rgb(183, 0, 255)); */
+          background-image: linear-gradient(to bottom right,rgb(102, 152, 228), rgb(211, 150, 235));
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        div{
+            width:25%;
+            height: 500px;
+            background-color: white;
+            margin: auto;
+            padding: 30px; 
+            border-radius: 10px;
+            margin-top :60px;
+        }
+        input[type="text"],input[type="password"]{
+            width:95%;
+            padding:10px;
+            margin-top:6px;
+            margin-bottom: 10px;
+            border:0px ;
+            border-radius: 5px;
+            background-color: white;
+        }
+        button{
+            width:100%;
+            padding:20px;
+            margin-top:15px;
+            margin-bottom: 5px;
+            border:0px ;
+            border-radius: 5px;
+            background-image: linear-gradient(to bottom right,rgb(102, 152, 228), rgb(211, 150, 235));
+            color: white;
+        }
+        button:hover{
+            border: 2px solid rgb(102, 152, 228);
+            color:rgb(102, 152, 228);
+            background-image: linear-gradient(to bottom right,rgb(213, 223, 241), rgb(224, 197, 233));
+        }
+        label{
+            color: rgb(61, 61, 104);
+            font-size: 20px;
+        }
+        h1{
+            text-align: center;;
+        }
+        #info{
+            width:80%;
+            height:auto;
+            border:0px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            LOGIN
+        </h1>
+        <input type="text" placeholder="EMAIL" id="email"><br><hr>
+
+        <input type="password" placeholder="PASSWORD" id="pass"><br><hr>
+
+        <!-- <input type="submit" /> -->
+        <button>LOGIN</button>
+        <div id ="info">
+            <p>Forgot <a href="">Password ?</a></p>
+            <p>Don't have an account? <a href="">Sign up?</a></p>
+        </div>
+        
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",set_email)
+    function set_email(){
+        let eMail=document.querySelector("#email").value;
+        localStorage.setItem("email",eMail);
+        let password=document.querySelector("#pass").value;
+        localStorage.setItem("password",password)
+    }
+</script>
