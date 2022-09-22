@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #contain{
+            width: 61%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1,auto);
+            gap: 20px;
+            margin: auto;
+            
+        }
+        #contain>div{
+            width: 95%;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           
+        }
+       img{
+        width:40%;
+        height: auto;
+       
+        margin-left: 25%;
+       
+        
+        
+       }
+       div>p>ins{
+        color: green;
+        font-weight: 100;
+       }
+        h2{
+            font-size: 30px;
+           
+        }
+
+       p{
+        font-size: 30px;
+        
+       }
+       
+       div>h2+p{
+        color: rgb(85, 81, 81);
+       }
+
+       div>p>del{
+        color:rgb(85, 81, 81) ;
+        border: 0;
+        font-weight: 100;
+       }
+       div>p+p{
+        font-weight: bold;
+       }
+       div>p>del:nth-child(1){
+       font-size:24px;
+       }
+
+    </style>
+</head>
+<body>
+    <div id="contain">
+        <div>
+            <img src="https://rukminim1.flixcart.com/image/660/792/xif0q/shrug/v/k/1/m-sty-shr005ro-styvibe-original-imaggxxzjgzjb8nn.jpeg?q=50" alt="">
+            <h2>Pause</h2>
+            <p>Men cotton Long Sleeves Shrug</p>
+            <p>$ 359 <del>$</del> <del>1,499</del> <ins>-76%</ins></p>
+        </div>
+        <div>
+            <img src="https://rukminim1.flixcart.com/image/660/792/xif0q/shrug/v/k/1/m-sty-shr005ro-styvibe-original-imaggxxzjgzjb8nn.jpeg?q=50" alt="">
+            <h2>JUBINATION</h2>
+            <p>Men Wool Sleeveless Sweater pack of 1</p>
+            <p>$ 359 <del>$</del> <del>1,499</del> <ins>-76%</ins></p>
+        </div>
+    </div>
+</body>
+</html>
